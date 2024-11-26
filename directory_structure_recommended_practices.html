@@ -41,6 +41,15 @@
              <p>Preserve all of the standard, underway data and documentation collected by the vessel operator organized as it was provided to the science party.</p>
           </li>
        </ol>
+       <h2>Standardize the Directory Structure</h2>
+       <ul class="SSP-20 grey">
+          <li>R2R uses regexes to map files to devices.</li>
+          <li>Consolidating and standardizing data directories and files within distros, it is easier for R2R to maintain up-to-date mapping and ensure that it identifies all relevant data files.</li>
+          <ul>
+             <li>Acquisition systems are an effective means of standardizing the directory structure for serial devices and perform other useful bookkeeping procedures like enforcing valid filenames.</li>
+             <li>A standardized directory structure also helps scientists who work across multiple vessels.</li>
+          </ul>
+       </ul>
        <h2 class="SSP-20 grey bold">Directory Tree</h2>
        <ul class="SSP-20 grey no-bullet mt-4">
           <li>
@@ -95,14 +104,5 @@
           <li>Operator delivers a checksum manifest with each distro so that R2R can validate shoreside, using the <a href="http://md5deep.sourceforge.net/" class="grey-underline">md5deep</a> program: <i>md5deep -c -r -l -o f -t -z cruise &gt; cruise.md5deep</i></li>
           <li>Cruise distros are posted for R2R to download via network transfer (rsync) or shipped on a USB portable drive with NTFS or EXT3 filesystem. These distros should include only standard, underway data and documentation collected by the vessel operator. Science party data should not be included.</li>
        </ul>
-       <h2>Standardize the Directory Structure</h2>
-      <ul class="SSP-20 grey">
-        <li>R2R uses regexes to map files to devices.</li>
-        <li>Consolidating and standardizing data directories and files within distros, it is easier for R2R to maintain up-to-date mapping and ensure that it identifies all relevant data files.</li>
-        <ul>
-          <li>Acquisition systems are an effective means of standardizing the directory structure for serial devices and perform other useful bookkeeping procedures like enforcing valid filenames.</li>
-          <li>A standardized directory structure also helps scientists who work across multiple vessels.</li>
-        </ul>
-      </ul>
     </div>
  </div>
