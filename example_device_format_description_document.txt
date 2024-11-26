@@ -1,0 +1,39 @@
+Data Format Description:
+The file contains GGA, VTG, and ZDA strings, alternating line-by-line, preceded by decimal unix system timestamps. Definitions follow.
+
+Definition of Unix time:
+  Decimal seconds since 00:00:00 UTC - January 1, 1970 (minus leap seconds)
+
+Definition of GGA:
+GGA - essential fix data which provide 3D location and quality data.
+
+Example Record: $GPGGA, 123519, 4807.038,N, 01131.000,E, 1,08, *47
+
+where:
+      123519           Fix taken at 12:35:19 UTC
+      4807.038, N      Latitude 48 degrees 07.038 minutes North
+      01131.000,E      Longitude 11 degrees 31.000 minutes East
+      1                Fix quality: 0 = fix not available or invalid
+                             1 = GPS Standard Positioning Service (SPS) mode, fix valid
+                             2 = differential GPS (DGPS), SPS mode, fix valid
+                             3 = GPS Precise Point Positioning (PPS) mode, fix valid
+      08              Number of satellites being tracked
+      *47             Checksum, always begins with *
+
+
+Definition of ZDA:
+ZDA - Date and Time
+
+Example Record: $GPZDA, 201530.18,04,07,2002,01,00*60
+
+where:
+      201530.18      hours, minutes, and seconds expressed as hhmmss.ss
+                          20      2-digit hour [24 hour clock]
+                          15      2-digit minute
+                          30.18   decimal seconds
+      04            2-digit day,
+      07            2-digit month
+      2002          4-digit year
+      01            2-digit local timezone hours: -13 to 13
+      00            2-digit local timezone minutes: 0 to 59
+      *60           Checksum, begins with *
