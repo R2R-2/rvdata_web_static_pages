@@ -2,7 +2,7 @@ Data Format Description:
 The file contains GGA, VTG, and ZDA strings, alternating line-by-line, preceded by decimal unix system timestamps. Definitions follow.
 
 Definition of Unix time:
-  Decimal seconds since 00:00:00 UTC - January 1, 1970 (minus leap seconds)
+Decimal seconds since 00:00:00 UTC - January 1, 1970 (minus leap seconds)
 
 Definition of GGA:
 GGA - essential fix data which provide 3D location and quality data.
