@@ -56,13 +56,13 @@
     <li>Include date strings in filenames if possible. We use these strings to verify what date corresponds to which file. Avoid Julian Day date/time as it interferes with our automated date checking processes.</li>
     <li>Don't put special characters in filenames. Examples of problem file names:</li>
     <ul>
-      <li>“Seapath 330 User's Guide.pdf”: this shouldn't have an apostrophe.</li>
+      <li>“Seapath_330_User's_Guide.pdf”: this shouldn't have an apostrophe.</li>
       <li>“Knudsen comparison with SBP39_top line of Oceanus Z_W-bound_same line, same time.jpg”: this shouldn't have commas or spaces.</li>
     </ul>
   </ul>
   <h3>Network Transfers (Globus)</h3>
   <ul>
-    <li>R2R is moving away from physical storage handoffs in network transfers.</li>
+    <li>R2R is moving away from physical storage handoffs to network transfers.</li>
     <li>R2R's preferred network transfer method is Globus.</li>
     <ul>
       <li>Globus performs checks on all transmitted data to ensure file integrity remains uncompromised, and ensures security of the transfer.</li>
@@ -83,7 +83,7 @@
   <h3>Data-Specific Asks</h3>
   <ul>
     <li>Check for empty files i.e. not zero-byte but missing required data.</li>
-    <li>Geophysical data: Include gravity ties and magnetometer layback in the distro.</li>
+    <li>Geophysical data: include gravity ties and magnetometer layback in the distro.</li>
     <li>Confirm water column sonar data contains navigation.</li>
     <ul>
       <li>Lack of navigation in wcd data creates downstream issues for archiving at NCEI.</li>
