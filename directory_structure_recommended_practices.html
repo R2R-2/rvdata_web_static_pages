@@ -1,7 +1,7 @@
  <div class="container ng-scope">
     <div class="d-flex align-items-end">
        <div class="mr-auto">
-          <h1 class="EB-36 blue mt-5 mb-0">Directory Structure</h1>
+          <h1 class="EB-36 blue mt-5 mb-0">Directory Structure Recommendations</h1>
        </div>
        <div class="ml-auto d-none d-sm-block">
           <a class="SSP-18 blue-underline" href="/">Home</a>
@@ -15,9 +15,6 @@
     </div>
     <hr>
     <div class="my-5">
-       <p class="SSP-20 grey">
-          <i>This is the recommended (not required) cruise data directory structure for R2R participating operators, intended as guidance when designing your vessel acquisition system.</i>
-       </p>
        <p class="SSP-20 grey text-right">
           <i>(last updated 2024-12-04)</i>
        </p>
@@ -44,13 +41,13 @@
        <h2>Standardize the Directory Structure</h2>
        <ul class="SSP-20 grey">
           <li>R2R uses regexes to map files to devices.</li>
-          <li>Consolidating and standardizing data directories and files within distros, it is easier for R2R to maintain up-to-date mapping and ensure that it identifies all relevant data files.</li>
+          <li>Consolidating and standardizing data directories and files within distros makes it is easier for R2R to maintain up-to-date mapping and ensure that it identifies all relevant data files.</li>
           <ul>
              <li>Acquisition systems are an effective means of standardizing the directory structure for serial devices while performing other useful bookkeeping procedures like enforcing valid filenames.</li>
              <li>A standardized directory structure also helps scientists who work across multiple vessels.</li>
           </ul>
        </ul>
-       <h2 class="SSP-20 grey bold">Directory Tree</h2>
+       <h2 class="SSP-20 grey bold">Recommended Directory Tree</h2>
        <ul class="SSP-20 grey no-bullet mt-4">
           <li>
              <strong>CRUISEID /</strong>
@@ -96,13 +93,13 @@
        <h2 class="SSP-20 bold grey">Recommended Practices</h2>
        <ul class="SSP-20 grey">
           <li>Cruise IDs are unique within R2R. The exact naming style is left to each operator, but IDs should begin with the vessel's <a class="grey-underline" href="/about/technical-details/vocabularies/vessel">unique prefix</a>.</li>
-          <li>Directory and file names use standard vocabulary of <a class="grey-underline" href="/about/technical-details/vocabularies/device-type">device type</a> , make, and model. Names are lowercase, with no spaces or non-alphanumeric characters except nonconsecutive underscores and periods. R2R will never modify any original file received from an operator.</li>
+          <li>Directory and file names use standard vocabulary of <a class="grey-underline" href="/about/technical-details/vocabularies/device-type">device type</a>, make, and model. Names are lowercase, with no spaces or non-alphanumeric characters except nonconsecutive underscores and periods. R2R will never modify any original file received from an operator.</li>
           <li>Some operators support simultaneous acquisition of both original/full-resolution and subsampled/multiplexed data. These should be clearly separated in the directory structure.</li>
           <li>Write all data from the same "talker" (i.e. multiple NMEA sentences from the same GNSS receiver port) to the same file. Break data files daily where possible.</li>
           <li>Some vessels log both original/full-resolution and multiplexed/subsampled data files. These should be clearly separated in the directory structure.</li>
           <li>Individual files are not compressed. The entire cruise distro may be packaged with GNU tar/gzip.</li>
           <li>Operator delivers a checksum manifest with each distro so that R2R can validate shoreside, using the <a href="http://md5deep.sourceforge.net/" class="grey-underline">md5deep</a> program: <i>md5deep -c -r -l -o f -t -z cruise &gt; cruise.md5deep</i></li>
-          <li>Cruise distros are posted for R2R to download via network transfer (rsync) or shipped on a USB portable drive with NTFS or EXT3 filesystem. These distros should include only standard, underway data and documentation collected by the vessel operator. Science party data should not be included.</li>
+          <li>Cruise distros are posted for R2R to download via network transfer (rsync). These distros should include only standard, underway data and documentation collected by the vessel operator. Science party data should not be included.</li>
        </ul>
     </div>
  </div>
