@@ -1,25 +1,17 @@
- <div class="container ng-scope">
-    <div class="d-flex align-items-end">
-       <div class="mr-auto">
-          <h1 class="EB-36 blue mt-5 mb-0">Directory Structure Recommendations</h1>
-       </div>
-       <div class="ml-auto d-none d-sm-block">
-          <a class="SSP-18 blue-underline" href="/">Home</a>
-          <span class="SSP-18 grey"> / </span>
-          <a class="SSP-18 blue-underline" href="/community">Community</a>
-          <span class="SSP-18 grey"> / </span>
-          <a class="SSP-18 blue-underline" href="/community/ship-operators">For Ship Operators</a>
-          <span class="SSP-18 grey"> / </span>
-          <a class="SSP-18 grey" href="/community/ship-operators/underway">Directory Structure</a>
-       </div>
-    </div>
+<table><tr><td style="text-align:left"><p class="header h1 mc">Directory Structure Recommendations</p></td>
+<td style="text-align:right"><p class="path">
+    <a href="/">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+    <a href="/community">Community</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+    <a href="/community/ship-operators">For Ship Operators</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+    Directory Structure Recommendations
+      </td></tr></table>
     <hr>
     <div class="my-5">
-       <p class="SSP-20 grey text-right">
+       <p class="mainbody text-right">
           <i>(last updated 2024-12-04)</i>
        </p>
-       <h2 class="SSP-20 grey bold">Design Goals</h2>
-       <ol class="SSP-20 grey">
+       <h2 class="mainbody"><b>Design Goals</b></h2>
+       <ol class="mainbody">
           <li>
              <p>Preserve original "full"-resolution data from the instruments - especially primary navigation.</p>
           </li>
@@ -39,7 +31,7 @@
           </li>
        </ol>
        <h2>Standardize the Directory Structure</h2>
-       <ul class="SSP-20 grey">
+       <ul class="mainbody">
           <li>R2R uses regexes to map files to devices.</li>
           <li>Consolidating and standardizing data directories and files within distros makes it is easier for R2R to maintain up-to-date mapping and ensure that it identifies all relevant data files.</li>
           <ul>
@@ -47,8 +39,8 @@
              <li>A standardized directory structure also helps scientists who work across multiple vessels.</li>
           </ul>
        </ul>
-       <h2 class="SSP-20 grey bold">Recommended Directory Tree</h2>
-       <ul class="SSP-20 grey no-bullet mt-4">
+       <h2 class="mainbody"><b>Recommended Directory Tree</b></h2>
+       <ul class="mainbody no-bullet mt-4">
           <li>
              <strong>CRUISEID /</strong>
              <ul class="no-bullet">
@@ -90,8 +82,8 @@
              </ul>
           </li>
        </ul>
-       <h2 class="SSP-20 bold grey">Recommended Practices</h2>
-       <ul class="SSP-20 grey">
+       <h2 class="mainbody"><b>Recommended Practices</b></h2>
+       <ul class="mainbody">
           <li>Cruise IDs are unique within R2R. The exact naming style is left to each operator, but IDs should begin with the vessel's <a class="grey-underline" href="/about/technical-details/vocabularies/vessel">unique prefix</a>.</li>
           <li>Directory and file names use standard vocabulary of <a class="grey-underline" href="/about/technical-details/vocabularies/device-type">device type</a>, make, and model. Names are lowercase, with no spaces or non-alphanumeric characters except nonconsecutive underscores and periods. R2R will never modify any original file received from an operator.</li>
           <li>Some operators support simultaneous acquisition of both original/full-resolution and subsampled/multiplexed data. These should be clearly separated in the directory structure.</li>
@@ -102,4 +94,3 @@
           <li>Cruise distros are posted for R2R to download via network transfer (rsync). These distros should include only standard, underway data and documentation collected by the vessel operator. Science party data should not be included.</li>
        </ul>
     </div>
- </div>
