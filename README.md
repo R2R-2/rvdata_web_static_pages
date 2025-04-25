@@ -5,4 +5,12 @@ Pages are hosted via GitHub pages. They are pure html without any CSS - intended
 
 To see the CSS classes used in the new website, visit http://upgrade.rvdata.us/styles/main.css
 
-Example static page: https://r2r-2.github.io/rvdata_web_static_pages/community.html
+
+Page Mappings List ( github pages -> rvdata.us )
+
+https://r2r-2.github.io/rvdata_web_static_pages/community.html  -> https://www.rvdata.us/community
+https://r2r-2.github.io/rvdata_web_static_pages/example_format_document.txt -> https://www.rvdata.us/recommended_practices/example_format_document
+https://r2r-2.github.io/rvdata_web_static_pages/community-developers.html -> https://www.rvdata.us/community/developers
+https://r2r-2.github.io/rvdata_web_static_pages/about-technical-details.html -> https://www.rvdata.us/about/technical-details
+https://r2r-2.github.io/rvdata_web_static_pages/recommended_practices.html -> https://www.rvdata.us/recommended_practices
+https://r2r-2.github.io/rvdata_web_static_pages/directory_structure_recommended_practices.html -> https://www.rvdata.us/community/ship-operators/directory-structure
