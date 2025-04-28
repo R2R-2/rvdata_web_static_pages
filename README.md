@@ -6,3 +6,5 @@ Pages are hosted via GitHub pages. They are pure html without any CSS - intended
 To see the CSS classes used in the new website, visit http://upgrade.rvdata.us/styles/main.css
 
 Progress tracking document: https://rvdata.atlassian.net/wiki/spaces/R2R2/database/930807809?atl_f=PAGETREE
+
+Domain: https://r2r-2.github.io/rvdata_web_static_pages
