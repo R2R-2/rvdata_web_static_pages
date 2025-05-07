@@ -1,0 +1,234 @@
+<div class="row py-3">
+   <!-- ngIf: devices -->
+   <table ng-if="devices" class="table table-striped table-borderless ng-scope" style="">
+      <thead>
+         <tr>
+            <th scope="col" class="EB-28 blue" style="font-weight:400">Instrument</th>
+            <th scope="col" class="EB-28 blue" style="font-weight:400">Description</th>
+         </tr>
+      </thead>
+      <tbody>
+         <!-- ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=adcp" class="ng-binding" href="/search?keyword=adcp">ADCP</a> </th>
+            <td class="SSP-20 grey ng-binding">(acoustic doppler current profiler) sonar measures water current velocities</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=anemometer" class="ng-binding" href="/search?keyword=anemometer">Anemometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures wind speed and direction</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=barometer" class="ng-binding" href="/search?keyword=barometer">Barometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures atmospheric pressure</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=ctd" class="ng-binding" href="/search?keyword=ctd">CTD</a> </th>
+            <td class="SSP-20 grey ng-binding">integrated hydro system measures conductivity, temp, pressure, etc.</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=expendableprobe" class="ng-binding" href="/search?keyword=expendableprobe">Expendable Probe</a> </th>
+            <td class="SSP-20 grey ng-binding">hand/deck-launched single-use depth probes - XBT, XCTD, XSV, XCP, etc.</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=flowmeter" class="ng-binding" href="/search?keyword=flowmeter">Flowmeter</a> </th>
+            <td class="SSP-20 grey ng-binding">measures rate of water flow - mechanical, optical, electromagnetic, etc.</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=fluorometer" class="ng-binding" href="/search?keyword=fluorometer">Fluorometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures fluorescence (usually for phytoplankton)</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=gnss" class="ng-binding" href="/search?keyword=gnss">GNSS</a> </th>
+            <td class="SSP-20 grey ng-binding">(global navigation satellite system) - GPS/WAAS, GLONASS, Galileo, etc.</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=gravimeter" class="ng-binding" href="/search?keyword=gravimeter">Gravimeter</a> </th>
+            <td class="SSP-20 grey ng-binding">measures the Earth's local gravitational field</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=gyrocompass" class="ng-binding" href="/search?keyword=gyrocompass">Gyrocompass</a> </th>
+            <td class="SSP-20 grey ng-binding">compass with a motorized gyroscope that tracks true north (heading)</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=hygrometer" class="ng-binding" href="/search?keyword=hygrometer">Hygrometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures moisture content in atmosphere, typically also includes air temperature</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=ins" class="ng-binding" href="/search?keyword=ins">INS</a> </th>
+            <td class="SSP-20 grey ng-binding">determines spatial position and motion using inertial sensors with input from additional sensors (eg. satellite fixes)</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=magnetometer" class="ng-binding" href="/search?keyword=magnetometer">Magnetometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures strength and/or direction of the Earth's local magnetic field</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=metstation" class="ng-binding" href="/search?keyword=metstation">Met Station</a> </th>
+            <td class="SSP-20 grey ng-binding">logger/translator/display hardware unit that integrates data from several meteorological sensors</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=multibeam" class="ng-binding" href="/search?keyword=multibeam">Multibeam Sonar</a> </th>
+            <td class="SSP-20 grey ng-binding">multiple formed beam echosounder (mapping sonar)</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=nitrate" class="ng-binding" href="/search?keyword=nitrate">Nitrate Sensor</a> </th>
+            <td class="SSP-20 grey ng-binding">measures nitrate in water</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=oxygen" class="ng-binding" href="/search?keyword=oxygen">Oxygen Sensor</a> </th>
+            <td class="SSP-20 grey ng-binding">(DO) measures amount of free oxygen dissolved in water</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=pco2" class="ng-binding" href="/search?keyword=pco2">pCO2</a> </th>
+            <td class="SSP-20 grey ng-binding">measures partial pressure of dissolved carbon dioxide</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=ph" class="ng-binding" href="/search?keyword=ph">pH</a> </th>
+            <td class="SSP-20 grey ng-binding">measures acidic or basic value of seawater</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=ptu" class="ng-binding" href="/search?keyword=ptu">PTU</a> </th>
+            <td class="SSP-20 grey ng-binding">measures any/all of barometric pressure, air temperature, relative humidity</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=radiometer" class="ng-binding" href="/search?keyword=radiometer">Radiometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures radiation - pyranometer, pyrheliometer, pyrgeometer, etc.</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=raingauge" class="ng-binding" href="/search?keyword=raingauge">Rain Gauge</a> </th>
+            <td class="SSP-20 grey ng-binding">(udometer) measures amount of liquid precipitation</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=singlebeam" class="ng-binding" href="/search?keyword=singlebeam">Singlebeam Sonar</a> </th>
+            <td class="SSP-20 grey ng-binding">singlebeam ("profiling") echosounder used primarily to acquire bathymetry and/or subbottom data; may be fixed frequency or chirped</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=speedlog" class="ng-binding" href="/search?keyword=speedlog">Speed Log</a> </th>
+            <td class="SSP-20 grey ng-binding">measures Doppler near surface vessel speed through water</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=splitbeam" class="ng-binding" href="/search?keyword=splitbeam">Splitbeam Sonar</a> </th>
+            <td class="SSP-20 grey ng-binding">splitbeam ("fishfinding") echosounder used primarily to acquire water column imagery</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=ssv" class="ng-binding" href="/search?keyword=ssv">SSV</a> </th>
+            <td class="SSP-20 grey ng-binding">sound velocity profiler - typically installed in seachest for multibeam</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=tempprobe_air" class="ng-binding" href="/search?keyword=tempprobe_air">Thermometer, Air</a> </th>
+            <td class="SSP-20 grey ng-binding">measures temperature of air/atmosphere</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=tempprobe_water" class="ng-binding" href="/search?keyword=tempprobe_water">Thermometer, Water</a> </th>
+            <td class="SSP-20 grey ng-binding">measures temperature of water (oceanographic thermometer)</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=timeserver" class="ng-binding" href="/search?keyword=timeserver">Time Server</a> </th>
+            <td class="SSP-20 grey ng-binding">reads time from reference clock (GPS, WWVB, etc.) and distributes locally</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=transmissometer" class="ng-binding" href="/search?keyword=transmissometer">Transmissometer</a> </th>
+            <td class="SSP-20 grey ng-binding">measures fraction of light absorbed, or scattered, by particles in water</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=tsg" class="ng-binding" href="/search?keyword=tsg">TSG</a> </th>
+            <td class="SSP-20 grey ng-binding">(thermosalinograph) measures sea surface temperature, salinity, etc. near seawater intake</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=USBL" class="ng-binding" href="/search?keyword=USBL">Ultra Short Baseline Positioning System</a> </th>
+            <td class="SSP-20 grey ng-binding">Systems dedicated to the positioning of subsea vehicles such as ROV and AUV. They are based on acoustic transmitted signals between one or several transponders and one acoustic antenna installed on a surface vessel. The transponders are mounted on the underwater vehicle or are fixed on the seafloor. These underwater acoustic positioning systems are coupled with inertial navigation systems.</td>
+         </tr>
+         <!-- end ngRepeat: device in devices -->
+         <tr ng-repeat="device in devices" class="ng-scope">
+            <th scope="row" class="SSP-20 blue-underline"> <a ng-href="/search?keyword=waveradar" class="ng-binding" href="/search?keyword=waveradar">Wave Radar</a> </th>
+            <td class="SSP-20 grey ng-binding">nautical X-Band radar measures wind waves and/or surface currents</td>
+         </tr>
+         <!-- end ngRepeat: device in devices --> 
+      </tbody>
+   </table>
+   <!-- end ngIf: devices --> <!-- ngIf: devices -->
+   <hr ng-if="devices" class="ng-scope" style="">
+   <!-- end ngIf: devices --> 
+   <h2 class="EB-28 blue">Products</h2>
+   <p class="SSP-20 grey mb-4">In addition to near-real-time quality assessment of MET/TSG data produced by <a ng-href="http://samos.coaps.fsu.edu/html/" href="http://samos.coaps.fsu.edu/html/">SAMOS</a>, and post-cruise quality assessment of selected data types, R2R creates and serves a set of standard products for each cruise:</p>
+   <div class="row">
+      <div class="col-12 col-lg-6 col-xl-3 pb-4">
+         <div class="card border-0">
+            <h5 class="card-header border-0 EB-22 white blue-background">Metadata</h5>
+            <div class="card-body light-background">
+               <h5 class="card-title SSP-20 bold grey">“Cruise-level” metadata record consisting of:</h5>
+               <p class="card-text SSP-20 grey">Expedition summary including: </p>
+               <ul>
+                  <li class="SSP-20 grey">cruise id</li>
+                  <li class="SSP-20 grey">vessel</li>
+                  <li class="SSP-20 grey">operator</li>
+                  <li class="SSP-20 grey">project titles</li>
+                  <li class="SSP-20 grey">funding awards</li>
+                  <li class="SSP-20 grey">ports</li>
+                  <li class="SSP-20 grey">dates</li>
+                  <li class="SSP-20 grey">trackline geometry</li>
+               </ul>
+               <p></p>
+               <p class="card-text SSP-20 grey">Inventory of underway data sets including type, make, and model of each instrument system along with file format and release status.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-3 mb-4">
+         <div class="card border-0">
+            <h5 class="card-header border-0 EB-22 white blue-background">Shiptrack Navigation</h5>
+            <div class="card-body light-background">
+               <h5 class="card-title SSP-20 bold grey">Quality-controlled shiptrack navigation as a suite of files:</h5>
+               <p class="card-text SSP-20 grey">Original resolution (typically 1-second GNSS/INS), 1-minute resolution, and abstracted (minimized) set of "control points".</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-3 mb-4">
+         <div class="card border-0">
+            <h5 class="card-header border-0 EB-22 white blue-background">Eventlogger</h5>
+            <div class="card-body light-background">
+               <h5 class="card-title SSP-20 bold grey">Scientific Sampling Event Log</h5>
+               <p class="card-text SSP-20 grey">The Eventlogger includes event numbers unique for the cruise, time, position, station and cast identifier as appropriate to the sampling event sampling instrument name (e.g. CTD, TM, MOC10), name of person responsible for the event, and a comment.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-3 mb-4">
+         <div class="card border-0">
+            <h5 class="card-header border-0 EB-22 white blue-background">Post-processed Data</h5>
+            <div class="card-body light-background">
+               <h5 class="card-title SSP-20 bold grey">Post-processed data profiles for selected data types:</h5>
+               <p class="card-text SSP-20 grey">Geophysical trackline profiles (underway gravity, magnetics, bathymetry, etc) for vessels equipped with these instrument types; and Hydrographic profiles (depth, temperature, salinity, etc from CTD).</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
