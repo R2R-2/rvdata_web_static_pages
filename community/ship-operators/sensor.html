@@ -1,0 +1,71 @@
+<div class="mainbody">
+  <p style="width:100%; text-align:center">September 2011 – Version 1</p>
+  <p><a href="mailto:smith@coaps.fsu.edu">Shawn R. Smith</a><sup>1</sup> (smith@coaps.fsu.edu), Toby Martin<sup>2</sup>, David O’Gorman<sup>2</sup>, Daryl Swensen<sup>2</sup>, Bill Fanning<sup>3</sup>, Robert Arko<sup>4</sup>, Aaron Sweeney<sup>5</sup>, Dru Clark<sup>5</sup>, and Suzanne O'Hara<sup>4</sup>.</p>
+  <p><sup>1</sup>COAPS, Florida State University</p>
+  <p><sup>2</sup>Oregon State University</p>
+  <p><sup>3</sup>University of Rhode Island</p>
+  <p><sup>4</sup>LDEO, Columbia University</p>
+  <p><sup>5</sup>SIO, University of California San Diego</p>
+  <p><b>Introduction</b></p>
+  <p>As part of the ongoing NSF Rolling Deck to Repository (R2R) program and in support of the Shipboard Automated Meteorological and Oceanographic System (SAMOS) initiative, the authors have developed a draft data-exchange protocol focusing on real-time transfers of meteorology and thermosalinograph data from UNOLS-operated vessels to shore. One area of much discussion and debate has been a coordinate system (reference frame) for a research vessel that will allow sensors to be precisely located on the vessel. Such a coordinate system is generally considered to use a three-axis (x, y, z) approach (to date, no user requirements for a polar coordinate system have been raised).</p>
+  <p>Note: We use the term sensor, as opposed to the R2R device_type, since in some cases the device may have several sensors that are located in different physical locations. For example, the device type “metstation” may consist of a thermometer, hygrometer, and barometer that are separated by some distance on a mast. Also, the coordinate system should be flexible enough to represent positions of both point sources or the position and orientation of extended devices (e.g., transducer arrays).</p>
+  <p><b>Coordinate System Schema</b></p>
+  <p>During summer 2011, the authors arrived at a general consensus that the following information should be included to define the vessel coordinate system:</p>
+  <ol>
+    <li>x, y, z locations of the origin of the coordinate system (where is x=0, y=0, z=0)</li>
+    <li>The positive direction for each axis</li>
+    <li>The measurement units used when referencing the coordinate system</li>
+    <li>A survey reference (who conducted vessel survey and when)</li>
+    <li>Allowance for tilt angles relative to x, y, z axes and an indicator for clockwise versus counterclockwise angles [optional]</li>
+  </ol>
+  <p>Here is an example of a coordinate system definition in XML:</p>
+
+  <i>&lt;coordinateSystem&gt;</i>
+  <ul class="exampleCode">
+    <li>&lt;xPositive&gt;forward&lt;/xPositive&gt;</li>
+    <li>&lt;xOrigin&gt;fantail&lt;/xOrigin&gt;</li>
+    <li>&lt;yPositive&gt;port&lt;/yPositive&gt;</li>
+    <li>&lt;yOrigin&gt;center line&lt;/yOrigin&gt;</li>
+    <li>&lt;zPositive&gt;up&lt;/zPositive&gt;</li>
+    <li>&lt;zOrigin&gt;plimsoll&lt;/zOrigin&gt;</li>
+    <li>&lt;MeasurmentUnits&gt;Meters&lt;/MeasurmentUnits&gt;</li>
+    <li>&lt;SurveyReference&gt;J&amp;R surveys, Inc., January 10 2010&lt;/SurveyReference&gt;</li>
+  </ul>
+  <i>&lt;/coordinateSystem&gt;</i>
+  <p>With this coordinate system defined, the actual locations of sensors will include the following:</p>
+  <ol>
+    <li>x, y, z measurements from the origin</li>
+    <li>a descriptive location [optional] (a controlled vocabulary is under development by R2R)</li>
+  </ol>
+  <p>Here is an XML example for a GPS:</p>
+  <i>&lt;talker&gt;</i>
+  <ul class="exampleCode">
+    <li>&lt;make&gt;Garmin&lt;/make&gt;</li>
+    <li>&lt;model&gt;GPS 17N&lt;/model&gt;</li>
+    <li>&lt;serial_number&gt;R-231.2&lt;/serial_number&gt;</li>
+    <li>&lt;Location&gt;
+      <ul>
+	<li>&lt;x&gt;42.0&lt;/x&gt;</li>
+	<li>&lt;y&gt;2.0&lt;/y&gt;</li>
+	<li>&lt;z&gt;7.1&lt;/z&gt;</li>
+	<li>&lt;description&gt;Pilothouse roof&lt;/description&gt;</li>
+      </ul>
+    </li>
+    <li>&lt;/location&gt;</li>
+  </ul>
+  <i>&lt;/talker&gt;</i>
+  <p><b>Survey Reference</b></p>
+  <p>The form of the survey reference has been an area of much discussion. The consensus is that some form of survey reference document should be required. The option will exist to provide either a formal vessel survey document (from a vendor, see example above) or a brief document written by the operator on how they defined their coordinate system.</p>
+  <p>The survey document or operator coordinate system description will be provided to R2R. R2R will then host them in an on-line library, which can subsequently be referenced within the coordinate system schema (e.g., in the XML records). Within the Survey_reference block, a name, survey date, unique ID (leading to the document), and/or a URI can be used to link the survey reference at R2R.</p>
+  <p>Although having a well-defined coordinate system is essential, only the basic information on the origin and positive axis directions needs to be carried with the data files (e.g., in the XML schema above). The remaining details (e.g., which 2 points define the line of the axis or how the coordinates are defined in vector space) will be referenced via the survey document or operator description document. Most data users primarily need to know the offsets from the origin for a device and/or the difference in distance between devices referenced to the common origin.</p>
+  <p>The survey date and vessel for which the survey applies are critical metadata elements. The former should be part of the definition of the coordinate system (under the “survey_reference” block of information). For meteorology and thermosalinograph real-time data, the latter is available elsewhere in the metadata files, but an alternative may be needed for other device types.</p>
+  <p>Another consideration for the survey reference document is to store the x, y, z position of reference marks made on the vessel by the operators. In some cases, practically measuring the location of a sensor to these reference marks is easier/more practical than measuring to the vessel origin. In most cases, this information should be stored in the survey document or operator coordinate document. Another suggestion is to include x, y, z location of common instrument positions (e.g., jackstaff, mainmast, tow points, etc.) in the survey document.</p>
+  <p>There also may be cases when more than one formal survey document or operator description are needed. For example, a commercial survey may have been used for the multibeam, but this may not consider the location of the meteorological instruments. In this case, the operator may need to provide a secondary document describing the method used to provide a coordinate location of the meteorological sensors. If the same coordinate system is used, then the operator document will be included along with the commercial survey document. If a different coordinate system is used for the meteorological sensors, we will recommend that the operator document describe how this alternate coordinate system is offset from the commercial coordinate system (for the multibeam). This will reduce confusion in the future.</p>
+  <p>In summary, operators should provide sensor locations relative to the coordinate system(s) defined for their vessels. The coordinate system can be defined either by the operator or by a precise commercial vessel survey.</p>
+  <p><b>Controlled Vocabularies</b></p>
+  <p>In addition to the &lt;description&gt; field (see example above), provision for a controlled vocabulary of general vessel position descriptors is suggested. To facilitate metadata integration, R2R will look for a controlled vocabulary for maritime terms (starboard, centerline, fantail, etc). Once available, these terms can be used when defining the coordinate system (and elsewhere as needed).</p>
+  <p>In addition, there is a need for a controlled vocabulary for units. SAMOS suggested the UDUNITS system developed by UniData – <a href="http://www.unidata.ucar.edu/software/udunits/">http://www.unidata.ucar.edu/software/udunits/</a> – but others can be considered.</p>
+  <p><b>Final Thoughts</b></p>
+  <p>SAMOS and R2R will not recommend a specific origin for the coordinate system on the vessel. We certainly can provide examples for those who are interested. The desired origin is user dependent. Many activities desire an origin at the vessel center of mass, whereas others want an origin with a z=0 at the waterline (plimsoll). The specification herein will work for either origin, but the specification does not allow for conversion between coordinates (e.g., what is the difference in z between the center of mass and the plimsoll)?</p>
+  <p>Establishing a set of standard offsets from the origin to physical locations on the vessel has been suggested. For example, distances from the origin to the plimsoll line and tow point locations are desirable. Another suggestion is to establish an offset from the sample location (for example, offset in time or distance along a pipe run). This can be provided in the <location*gt; block="" for="" a="" device.="" the="" handling="" of="" offsets="" needs="" additional="" refinement="" in="" schema.<="" p="">
+</location*gt;></p></div>
