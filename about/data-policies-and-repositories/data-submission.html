@@ -1,112 +1,80 @@
-<div>
-   <h2 class="EB-28 blue mt-5 mb-4">Cruise, Vessel, and Device Information</h2>
-   <p class="SSP-20 grey">The Rolling Deck to Repository program (R2R; rvdata.us) provides shore-side data management for routine underway environmental sensor data collected on US academic research vessels. This work is a collaboration with vessel operators and chief scientists. The <a href="https://www.rvdata.us/community/roles-responsibilities">Research Vessel Data Management Roles and Responsibilities</a> document gives a high-level description of the various operator, Chief Scientist and R2R responsibilities, whereas this document describes in detail how operators should provide their data to R2R. For guidance on metadata that R2R expects from ship operators please see <a href="https://www.rvdata.us/about/technical-details/metadata">Metadata Requirements</a>.</p>
-   <h2 class="EB-28 blue mt-5 mb-4">R2R needs the following information from vessel operators</h2>
-   <p class="SSP-20 grey"> </p>
-   <ul class="SSP-20 grey">
-      <li>A description of all standard underway devices onboard the vessel, including make, model, location and filenames of data in directory structure and data format description. R2R should be notified of any changes in equipment or data location before sending a cruise data distribution. Operators are encouraged to use the <a href="https://www.rvdata.us/community/ship-operators/directory-structure">standard directory structure</a> for cruise data developed by the R2R program and the operator community. </li>
-      <li>
-         Cruise data distribution(s): 
-         <ul class="SSP-20 grey">
-            <li>Includes only vessel operated, underway data in standard format as described to R2R for this operator/vessel</li>
-            <li>Includes Navigation Data (at least one clearly-identified, full resolution GPS data set for creating a simple ship track on a location map)</li>
-            <li>Includes a md5deep report of all files to allow verification of distro content</li>
-            <li>Excludes any science party data, <a href="https://www.dol.gov/general/ppii">Personal Identifiable Information (PII)</a>, recreational communications or imagery, anything that would be <a href="https://www.copyright.gov/help/faq/faq-definitions.html">copyright infringement</a> (music, movies, …), etc.</li>
-            <li>Excludes data collected by dedicated facilities such as the National Marine Seismic Facility (NMSF), <a href="https://www.unols.org/ships-facilities/national-deep-submergence-facility-ndsf">National Deep Submergence Facility (NDSF)</a> or <a href="https://obsic.whoi.edu/experiments/obsip-experiment-archive/">The Ocean Bottom Seismic Instrument Center (OBSIC)</a>. Such data are already archived by other programs.</li>
-         </ul>
+<h2 class="header h2">Cruise, Vessel, and Device Information</h2>
+<p class="mainbody">The Rolling Deck to Repository program (R2R; rvdata.us) provides shore-side data management for routine underway environmental sensor data collected on US academic research vessels. This work is a collaboration with vessel operators and chief scientists. The <a class="blue" href="/community/roles-responsibilities">Research Vessel Data Management Roles and Responsibilities</a> document gives a high-level description of the various operator, Chief Scientist and R2R responsibilities, whereas this document describes in detail how operators should provide their data to R2R. For guidance on metadata that R2R expects from ship operators please see <a href="/about/technical-details/metadata">Metadata Requirements</a></p>
+<h2 class="header h2">R2R needs the following information from vessel operators</h2>
+<ul class="mainbody">
+  <li>A description of all standard underway devices onboard the vessel, including make, model, location and filenames of data in directory structure and data format description. R2R should be notified of any changes in equipment or data location before sending a cruise data distribution. Operators are encouraged to use the <a class="blue" href="/community/ship-operators/directory-structure">standard directory structure</a> for cruise data developed by the R2R program and the operator community.</li>
+  <li>Cruise data distribution(s):
+    <ul class="mainbody">
+      <li>Includes only vessel operated, underway data in standard format as described to R2R for this operator/vessel</li>
+      <li>Includes Navigation Data (at least one clearly-identified, full resolution GPS data set for creating a simple ship track on a location map)</li>
+      <li>Includes a md5deep report of all files to allow verification of distro content</li>
+      <li>Excludes any science party data, <a class="blue" href="https://www.dol.gov/general/ppii">Personal Identifiable Information (PII)</a>, recreational communications or imagery, anything that would be <a class="blue" href="https://www.copyright.gov/help/faq/faq-definitions.html">copyright infringement</a> (music, movies, …), etc.</li>
+      <li>Excludes data collected by dedicated facilities such as the National Marine Seismic Facility (NMSF), <a class="blue" href="https://www.unols.org/ships-facilities/national-deep-submergence-facility-ndsf">National Deep Submergence Facility (NDSF)</a> or <a class="blue" href="https://obsic.whoi.edu/experiments/obsip-experiment-archive/">The Ocean Bottom Seismic Instrument Center (OBSIC)</a>. Such data are already archived by other programs.</li>
+    </ul>
+  </li>
+</ul>
+<h2 class="header h2">Data Submission Guidelines</h2>
+<ul class="mainbody">
+  <li>Timely Data Submission<ul class="mainbody">
+      <li>R2R's goal is to receive new cruise data distributions (“distros”) on at least a quarterly basis.</li>
+      <li>Timely submission of data expedites the data publication process and gives R2R more time to verify and validate network-transmitted data.</li>
+    </ul>
+  </li>
+  <li>Avoid Data Update Requests<ul class="mainbody">
+      <li>It is difficult to make changes to data once they have been processed at R2R, and particularly if they have been archived at the NOAA National Centers for Environmental Information.</li>
+      <li>Please provide complete, finalized distros.</li>
+      <li>If changes are needed, please communicate with R2R in advance of sending a new distro.</li>
+    </ul>
+  </li>
+  <li>Separate Oversize Filesets<ul class="mainbody">
+      <li>Filesets over 500 gigabytes, such as those commonly generated by the SBP-29 & EK-80, should be separated from the rest of their distros and sent to R2R as separate tarballs.</li>
+      <li>The directory structure of the separate distro should match that of the original such that, if both were merged, the result would be identical to the original distro.</li>
+    </ul>
+  </li>
+  <li>Network Transfers (Globus)<ul class="mainbody">
+      <li>R2R is moving away from physical storage handoffs to network transfers.</li>
+      <li>R2R's preferred network transfer method is Globus.<ul class="mainbody">
+	  <li>Globus performs checks on all transmitted data to ensure file integrity remains uncompromised, and ensures security of the transfer.</li>
+	  <li>Pushing data to R2R's endpoint does not require a subscription.<ul class="mainbody">
+	      <li>If you are pushing a particularly large distro, please let us know by emailing <a href="mailto:info@rvdata.us">info@rvdata.us</a> beforehand!</li>
+	      <li>R2R is happy to help you set up and configure Globus.</li>
+	    </ul>
+	  </li>
+	</ul>
       </li>
-   </ul>
-   <p></p>
-   <h2 class="EB-28 blue mt-5 mb-4">Data Submission Guidelines</h2>
-   <ul class="SSP-20 grey">
-      <li>
-        Timely Data Submission
-        <ul class="SSP-20 grey">
-            <li>R2R's goal is to receive new cruise data distributions (“distros”) on at least a quarterly basis.</li>
-            <li>Timely submission of data expedites the data publication process and gives R2R more time to verify and validate network-transmitted data.</li>
-        </ul>
-      </li>
-      <li>
-         Avoid Data Update Requests
-         <ul class="SSP-20 grey">
-            <li>It is difficult to make changes to data once they have been processed at R2R, and particularly if they have been archived at the NOAA National Centers for Environmental Information.</li>
-            <li>Please provide complete, finalized distros.</li>
-            <li>If changes are needed, please communicate with R2R in advance of sending a new distro.</li>
-         </ul>
-      </li>
-      <li>
-        Separate Oversize Filesets
-        <ul class="SSP-20 grey">
-          <li>Filesets over 500 gigabytes, such as those commonly generated by the SBP-29 & EK-80, should be separated from the rest of their distros and sent to R2R as separate tarballs.</li>
-          <li>The directory structure of the separate distro should match that of the original such that, if both were merged, the result would be identical to the original distro.</li>
-        </ul>
-      </li>
-      <li>
-        Include Device Format Documentation
-        <ul class="SSP-20 grey">
-          <li>Text files specifying the columns of data for all underway devices should be included in the distro, preferably in the top-level <code>docs</code> directory.</li>
-          <li>Examples of ideal format documents can be accessed <a href="/recommended_practices/example_format_document.txt">here</a>.</li>
-        </ul>
-      </li>
-      <li>
-         Network Transfers (Globus)
-         <ul class="SSP-20 grey">
-            <li>R2R is moving away from physical storage handoffs to network transfers.</li>
-            <li>
-               R2R's preferred network transfer method is Globus. 
-               <ul>
-                  <li>Globus performs checks on all transmitted data to ensure file integrity remains uncompromised, and ensures security of the transfer.</li>
-                  <li>
-                     Pushing data to R2R's endpoint does not require a subscription. 
-                     <ul>
-                        <li>If you are pushing a particularly large distro, please let us know by emailing info@rvdata.us beforehand!</li>
-                        <li>R2R is happy to help you set up and configure Globus.</li>
-                     </ul>
-                  </li>
-               </ul>
-            </li>
-         </ul>
-      </li>
-   </ul>
-   <p></p>
-   <h2 class="EB-28 blue mt-5 mb-4">Data/Metadata Transfer methods</h2>
-   <table class="table table-striped table-borderless">
-      <thead class="blue-background">
-         <tr class="m-0">
-            <th class="SSP-20 white" scope="col">Transfer Method</th>
-            <th class="SSP-20 white" scope="col">Pros</th>
-            <th class="SSP-20 white" scope="col">Cons</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td class="SSP-20 grey p-1"><a href="https://www.globus.org/">Globus</a></td>
-            <td class="SSP-20 grey p-1"> Faster than SFTP, no need for a paid subscription to push data to R2R<br> Interrupted transfer are resumed automatically </td>
-            <td class="SSP-20 grey p-1">Operators will require a paid option for R2R to pull data.<br> May require system configuration by IT </td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey p-1">SFTP<br>SSH/rsync</td>
-            <td class="SSP-20 grey p-1"> Secure, relatively quick transfer times, reliable, R2R pulls from operator location </td>
-            <td class="SSP-20 grey p-1">Requires system configuration by operator </td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey p-1">Cloud downloads</td>
-            <td class="SSP-20 grey p-1"> Easily adaptable depending on what the operator is already utilizing<br> Use of Rclone has made these downloads more traceable </td>
-            <td class="SSP-20 grey p-1">Have encountered some issues with interrupted data uploads/losing files &amp; directories, as well as corrupting data on download<br> Some require paid subscriptions </td>
-         </tr>
-      </tbody>
-   </table>
-   <h2 class="EB-28 blue mt-5 mb-4">Data Transfer With Globus</h2>
-   <p class="SSP-20 grey">To transfer data via Globus:</p>
-   <ol class="SSP-20 grey">
-      <li><b>Get Globus Connect:</b> Download Globus Personal Connect or check for institutional site license.</li>
-      <li><b>Create Account:</b> Register <a href="https://www.globusid.org/create">here</a>.</li>
-      <li><b>Set Up Endpoint:</b> Configure an endpoint for your cruise data directory.</li>
-      <li><b>Share ID:</b> Send your Globus ID to <b>info@rvdata.us</b>. We'll set up your landing spot.</li>
-      <li><b>Test Transfer:</b> Upload a small test file to R2R to verify access.</li>
-      <li><b>Notify for Large Transfers:</b> Please inform us before uploading large cruise data so we can confirm disk space.</li>
-      <li><b>Help/Tutorials:</b> <a href="https://docs.globus.org/guides/tutorials/manage-files/">link</a></li>
-   </ol>
-   <h2 class="EB-28 blue mt-5 mb-4">Questions? Need Help?</h2>
-   <p class="SSP-20 grey">Please <a href="https://www.rvdata.us/contact">Contact Us</a> </p>
-</div>
+    </ul>
+  </li>
+  <li>Include Deep Checksum Files (.md5deep extension)<ul class="mainbody">
+      <li>md5deep files list the contents of a distro and generate md5 checksums for each file. R2R uses these files to verify that its copy of the distro matches the operator's copy.</li>
+      <li>Generating an md5deep file helps R2R perform distro integrity checks and is highly recommended.</li>
+    </ul>
+  </li>
+  <li>Safe and Effective File Naming<ul class="mainbody">
+      <li>Include date strings in filenames if possible. We use these strings to verify what date corresponds to which file. Avoid Julian Day date/time as it interferes with our automated date checking processes.</li>
+      <li>Don't put special characters in filenames. Examples of problem file names:<ul class="mainbody">
+	  <li>“Seapath_330_User's_Guide.pdf”: this shouldn't have an apostrophe.</li>
+	  <li>“Knudsen comparison with SBP39_top line of Oceanus Z_W-bound_same line, same time.jpg”: this shouldn't have commas or spaces.</li>
+	</ul>
+    </ul>
+  </li>
+  <li>Regularly Maintain Device Format Documentation<ul class="mainbody">
+      <li>Data format descriptions are critical for end users, and R2R will begin to use these documents to support automated checks on the data.</li>
+      <li>Include format description documents for all device types in a top-level “docs” directory. This should contain the name of the device, parameter names/description of all the fields in the data, structure, units, etc. Please include this for each NMEA string if you are using NMEA formats. <a href="/files/example_format_document.txt">Here is an example</a> of a device format document that covers the desired information (other document formats can be used).</li>
+      <li>Keep format documents up to date through time.</li>
+      <li>R2R serves device data format documentation to the end user.</li>
+    </ul>
+  </li>
+  <li>Data-Specific Asks<ul class="mainbody">
+      <li>Check for empty files i.e. not zero-byte but missing required data.</li>
+      <li>Geophysical data: include gravity ties and magnetometer layback in the distro.</li>
+      <li>Confirm water column sonar data contains navigation.<ul>
+	  <li>Lack of navigation in water column data creates downstream issues for archiving at NCEI.</li>
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+<h2 class="header h2">Data/Metadata Transfer Methods</h2>
+<p class="mainbody"><a href="https://www.globus.org/">Globus</a> is the preferred method for transferring cruise data to R2R. The R2R team would be happy to work with operators/technicians on getting Globus set up. If Globus is not feasible, please contact R2R to discuss a SFTP SSH/rsync or cloud download approach.</p>
+<br>
+<h2 class="header h2">Questions? Need help?</h2>
+<p class="mainbody">Please <a class="blue" href="/contact">Contact Us</a></p>
