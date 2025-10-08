@@ -1,229 +1,207 @@
-<div class="my-5">
-   <p class="SSP-20 grey">Summary of information typically provided to R2R by the vessel operator:</p>
-   <p class="SSP-20 grey"><i>+ - Repeatable</i></p>
-   <p class="SSP-20 grey"><i>* - from controlled vocabulary</i></p>
-   <h1 class="EB-28 bold blue">Vessel Metadata</h1>
-   <table class="table table-striped table-borderless mb-5">
-      <thead>
-         <tr>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Attribute</th>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Example</th>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Notes</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td class="SSP-20 grey">Name</td>
-            <td class="SSP-20 grey"> <i>Neil Armstrong</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Type*</td>
-            <td class="SSP-20 grey"> <i>R/V</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Prefix</td>
-            <td class="SSP-20 grey"> <i>AR</i> </td>
-            <td class="SSP-20 grey">For Cruise IDs from this vessel</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Operator*</td>
-            <td class="SSP-20 grey"> <i>WHOI</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Owner</td>
-            <td class="SSP-20 grey"> <i>ONR</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">ICES Code</td>
-            <td class="SSP-20 grey"> <i>33VB</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Designation</td>
-            <td class="SSP-20 grey"> <i>AGOR-27</i> </td>
-            <td class="SSP-20 grey">Typically for military-owned vessels</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">MMSI#</td>
-            <td class="SSP-20 grey"> <i>338767000</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Radio Sign</td>
-            <td class="SSP-20 grey"> <i>WARL</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">IMO#</td>
-            <td class="SSP-20 grey"> <i>9688946</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Length (m)</td>
-            <td class="SSP-20 grey"> <i>72.5</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Max Speed (m/s)</td>
-            <td class="SSP-20 grey"> <i>7.0</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Max Draft (m)</td>
-            <td class="SSP-20 grey"> <i>4.6</i> </td>
-            <td></td>
-         </tr>
-      </tbody>
-   </table>
-   <h1 class="EB-28 bold blue">Device Metadata</h1>
-   <table class="table table-striped table-borderless mb-5">
-      <thead>
-         <tr>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Attribute</th>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Example</th>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Notes</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td class="SSP-20 grey">Vessel</td>
-            <td class="SSP-20 grey"> <i>Neil Armstrong</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Parent Device</td>
-            <td class="SSP-20 grey"></td>
-            <td class="SSP-20 grey">If subcomponent ie. DO sensor on CTD</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Type*</td>
-            <td class="SSP-20 grey"> <i>metstation</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Make*</td>
-            <td class="SSP-20 grey"> <i>Vaisala</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Model*</td>
-            <td class="SSP-20 grey"> <i>WXT520</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Serial#</td>
-            <td class="SSP-20 grey"></td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Location</td>
-            <td class="SSP-20 grey"> <i>port</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Directory</td>
-            <td class="SSP-20 grey"> <i>/underway/raw/(.)*.WXP$</i> </td>
-            <td class="SSP-20 grey">Regex match to locate files on distro</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Format*</td>
-            <td class="SSP-20 grey"> <i>SUDS</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Install Date</td>
-            <td class="SSP-20 grey"> <i>2015-10-31</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Remove Date</td>
-            <td class="SSP-20 grey"></td>
-            <td></td>
-         </tr>
-      </tbody>
-   </table>
-   <h1 class="EB-28 bold blue">Cruise Metadata</h1>
-   <table class="table table-striped table-borderless mb-5">
-      <thead>
-         <tr>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Attribute</th>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Example</th>
-            <th scope="col" class="EB-28 blue" style="font-weight:400">Notes</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td class="SSP-20 grey">Vessel</td>
-            <td class="SSP-20 grey"> <i>Neil Armstrong</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">ID</td>
-            <td class="SSP-20 grey"> <i>AR26</i> </td>
-            <td class="SSP-20 grey">Assigned by ship operator</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Title</td>
-            <td class="SSP-20 grey"> <i>Collaborative Research: An Observational and Modeling Study of the Physical Processes Driving Exchanges between the Shelf and the Deep Ocean At Cape Hatteras</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Type*</td>
-            <td class="SSP-20 grey"> <i>Operational</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Operator*</td>
-            <td class="SSP-20 grey"> <i>WHOI</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Scheduler*</td>
-            <td class="SSP-20 grey"> <i>UNOLS</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Funder*</td>
-            <td class="SSP-20 grey"> <i>OCE</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Depart Date</td>
-            <td class="SSP-20 grey"> <i>2018-01-08</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Depart Port*</td>
-            <td class="SSP-20 grey"> <i>Woods Hole</i> </td>
-            <td class="SSP-20 grey">From UNOLS master port table</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Arrive Date</td>
-            <td class="SSP-20 grey"> <i>2018-01-21</i> </td>
-            <td></td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">Arrive Port*</td>
-            <td class="SSP-20 grey"> <i>Woods Hole</i> </td>
-            <td class="SSP-20 grey">From UNOLS master port table</td>
-         </tr>
-         <tr>
-            <td class="SSP-20 grey">
-               <p class="m-0">Chief Scientist</p>
-               <p class="m-0">Institution*</p>
-               <p class="m-0">Role*</p>
-            </td>
-            <td class="SSP-20 grey">
-               <p class="m-0"><i>Gawarkiewicz, Glen</i></p>
-               <p class="m-0"><i>WHOI</i></p>
-               <p class="m-0"><i>Scientist, Chief</i></p>
-            </td>
-            <td></td>
-         </tr>
-      </tbody>
-   </table>
-</div>
+<p class="mainbody">Summary of information typically provided to R2R by the vessel operator:</p>
+<p class="mainbody"><i>+ - Repeatable</i></p>
+<p class="mainbody"><i>* - from controlled vocabulary</i></p>
+<h2 class="header h2">Vessel Metadata</h2>
+<table class="zebra2 mainbody secondColItalic spacedTable">
+  <tr class="header h2" style="background-color:inherit">
+    <td>Attribute</td>
+    <td>Example</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>Neil Armstrong</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Type*</td>
+    <td>R/V</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Prefix</td>
+    <td>AR</td>
+    <td>For Cruise IDs from this vessel</td>
+  </tr>
+  <tr>
+    <td>Operator*</td>
+    <td>WHOI</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Owner</td>
+    <td>ONR</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ICES Code</td>
+    <td>33VB</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Designation</td>
+    <td>AGOR-27</td>
+    <td>Typically for military-owned vessels</td>
+  </tr>
+  <tr>
+    <td>MMSI#</td>
+    <td>338767000</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Radio Sign</td>
+    <td>WARL</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>IMO#</td>
+    <td>9688946</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Length (m)</td>
+    <td>72.5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Max Speed (m/s)</td>
+    <td>7.0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Max Draft (m)</td>
+    <td>4.6</td>
+    <td></td>
+  </tr>
+</table>
+<h2 class="header h2">Device Metadata</h2>
+<table class="zebra2 mainbody secondColItalic spacedTable">
+  <tr class="header h2" style="background-color:inherit">
+    <td>Attribute</td>
+    <td>Example</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>Vessel</td>
+    <td>Neil Armstrong</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Parent Device</td>
+    <td></td>
+    <td>If subcomponent i.e. DO sensor on CTD</td>
+  </tr>
+  <tr>
+    <td>Type*</td>
+    <td>metstation</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Make*</td>
+    <td>Vaisala</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Model*</td>
+    <td>WXT250</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Serial#</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Port</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Directory</td>
+    <td>/underway/raw/(.)*.WXP$</td>
+    <td>Regex match to locate files on distro</td>
+  </tr>
+  <tr>
+    <td>Format*</td>
+    <td>SUDS</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Install Date</td>
+    <td>2015-10-31</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Remove Date</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<h2 class="header h2">Cruise Metadata</h2>
+<table class="zebra2 mainbody secondColItalic spacedTable">
+  <tr class="header h2" style="background-color:inherit">
+    <td>Attribute</td>
+    <td>Example</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td>Vessel</td>
+    <td>Neil Armstrong</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>AR26</td>
+    <td>Assigned by ship operator</td>
+  </tr>
+  <tr>
+    <td>Title</td>
+    <td>Collaborative Research: An Observational and Modeling Study of the Physical Processes Driving Exchanges between the Shelf and the Deep Ocean At Cape Hatteras</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Type*</td>
+    <td>Operational</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Operator*</td>
+    <td>WHOI</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Scheduler*</td>
+    <td>UNOLS</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Funder*</td>
+    <td>OCE</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Depart Date</td>
+    <td>2018-01-08</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Depart Port*</td>
+    <td>Woods Hole</td>
+    <td>From UNOLS master port table</td>
+  </tr>
+  <tr>
+    <td>Arrive Date</td>
+    <td>2018-01-21</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Arrive Port</td>
+    <td>Woods Hole</td>
+    <td>From UNOLS master port table</td>
+  </tr>
+  <tr>
+    <td><p>Person+</p><p>Name</p><p>Institution*</p><p>Role*</p></td>
+    <td><p></p><br><p>Gawarkiewicz, Glen</p><p>WHOI</p><p>Scientist, Chief</p></td>
+    <td></td>
+  </tr>
+</table>
