@@ -1,5 +1,5 @@
 <h2 class="header h2">Cruise, Vessel, and Device Information</h2>
-<p class="mainbody">The Rolling Deck to Repository program (R2R; rvdata.us) provides shore-side data management for routine underway environmental sensor data collected on US academic research vessels. This work is a collaboration with vessel operators and chief scientists. The <a class="blue" href="/community/roles-responsibilities">Research Vessel Data Management Roles and Responsibilities</a> document gives a high-level description of the various operator, Chief Scientist and R2R responsibilities, whereas this document describes in detail how operators should provide their data to R2R. For guidance on metadata that R2R expects from ship operators please see <a href="/about/technical-details/metadata">Metadata Requirements</a></p>
+<p class="mainbody">The Rolling Deck to Repository program (R2R; rvdata.us) provides shore-side data management for routine underway environmental sensor data collected on US academic research vessels. This work is a collaboration with vessel operators and chief scientists. The <a class="blue" href="/community/roles-responsibilities">Research Vessel Data Management Roles and Responsibilities</a> document gives a high-level description of the various operator, Chief Scientist and R2R responsibilities, whereas this page describes in detail how operators should provide their data to R2R. For guidance on metadata that R2R expects from ship operators please see <a href="/about/technical-details/metadata">Metadata Requirements</a></p>
 <h2 class="header h2">R2R needs the following information from vessel operators</h2>
 <ul class="mainbody">
   <li>A description of all standard underway devices onboard the vessel, including make, model, location and filenames of data in directory structure and data format description. R2R should be notified of any changes in equipment or data location before sending a cruise data distribution. Operators are encouraged to use the <a class="blue" href="/community/ship-operators/directory-structure">standard directory structure</a> for cruise data developed by the R2R program and the operator community.</li>
@@ -35,7 +35,7 @@
       <li>R2R is moving away from physical storage handoffs to network transfers.</li>
       <li>R2R's preferred network transfer method is Globus.<ul class="mainbody">
 	  <li>Globus performs checks on all transmitted data to ensure file integrity remains uncompromised, and ensures security of the transfer.</li>
-	  <li>Pushing data to R2R's endpoint does not require a subscription.<ul class="mainbody">
+	  <li>Pushing data to R2R's endpoint <b>does not</b> require a subscription.<ul class="mainbody">
 	      <li>If you are pushing a particularly large distro, please let us know by emailing <a href="mailto:info@rvdata.us">info@rvdata.us</a> beforehand!</li>
 	      <li>R2R is happy to help you set up and configure Globus.</li>
 	    </ul>
@@ -46,7 +46,7 @@
   </li>
   <li>Include Deep Checksum Files (.md5deep extension)<ul class="mainbody">
       <li>md5deep files list the contents of a distro and generate md5 checksums for each file. R2R uses these files to verify that its copy of the distro matches the operator's copy.</li>
-      <li>Generating an md5deep file helps R2R perform distro integrity checks and is highly recommended.</li>
+      <li>Generating a md5deep file helps R2R perform distro integrity checks and is highly recommended.</li>
     </ul>
   </li>
   <li>Safe and Effective File Naming<ul class="mainbody">
