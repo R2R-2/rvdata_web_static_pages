@@ -1,39 +1,53 @@
-Data Format Description:
-The file contains GGA, VTG, and ZDA strings, alternating line-by-line, preceded by decimal unix system timestamps. Definitions follow.
+Data Format Description: These files contain GGA and ZDA strings preceded by decimal unix system timestamps. Each lines alternates the NMEA tag used.
 
-Definition of Unix time:
-Decimal seconds since 00:00:00 UTC - January 1, 1970 (minus leap seconds)
+Standards Followed: NMEA0183, Unix Epoch Time
 
-Definition of GGA:
-GGA - essential fix data which provide 3D location and quality data.
+Useful References: 
+https://receiverhelp.trimble.com/alloy-gnss/en-us/NMEA-0183messages_GGA.html
+https://receiverhelp.trimble.com/alloy-gnss/en-us/NMEA-0183messages_ZDA.html
 
-Example Record: $GPGGA, 123519, 4807.038,N, 01131.000,E, 1,08, *47
+Sample Rate: 1Hz
 
-where:
-      123519           Fix taken at 12:35:19 UTC
-      4807.038, N      Latitude 48 degrees 07.038 minutes North
-      01131.000,E      Longitude 11 degrees 31.000 minutes East
-      1                Fix quality: 0 = fix not available or invalid
-                             1 = GPS Standard Positioning Service (SPS) mode, fix valid
-                             2 = differential GPS (DGPS), SPS mode, fix valid
-                             3 = GPS Precise Point Positioning (PPS) mode, fix valid
-      08              Number of satellites being tracked
-      *47             Checksum, always begins with *
+Data line column descriptions (one description per unique line format):
 
+    Example Line: 1724619324.23 $GPGGA,123519,4807.038,N,01131.000,E,1,08,*47
+    where:
+	  1724619324.23    Unix Epoch Time (Decimal seconds since 00:00:00 UTC - January 1, 1970 minus leap seconds)
+	  $GPGGA           NMEA0183 standard tag: essential fix data which provide 3D location and quality data.
+	  123519           Fix taken at 12:35:19 UTC
+	  4807.038, N      Latitude 48 degrees 07.038 minutes North
+	  01131.000,E      Longitude 11 degrees 31.000 minutes East
+	  1                Fix quality: 0 = fix not available or invalid
+				 1 = GPS Standard Positioning Service (SPS) mode, fix valid
+				 2 = differential GPS (DGPS), SPS mode, fix valid
+				 3 = GPS Precise Point Positioning (PPS) mode, fix valid
+	  08              Number of satellites being tracked
+	  *47             Checksum, always begins with *
 
-Definition of ZDA:
-ZDA - Date and Time
+    Example Line: 1724619324.23 $GPZDA,201530.18,04,07,2002,01,00*60
+    where:
+	  1724619324.23  Unix Epoch Time (Decimal seconds since 00:00:00 UTC - January 1, 1970 minus leap seconds)
+	  $GPZDA         NMEA0183 standard tag: Date and Time
+	  201530.18      hours, minutes, and seconds expressed as hhmmss.ss
+			      20      2-digit hour [24 hour clock]
+			      15      2-digit minute
+			      30.18   decimal seconds
+	  04            2-digit day,
+	  07            2-digit month
+	  2002          4-digit year
+	  01            2-digit local timezone hours: -13 to 13
+	  00            2-digit local timezone minutes: 0 to 59
+	  *60           Checksum, begins with *
 
-Example Record: $GPZDA, 201530.18,04,07,2002,01,00*60
+Example File Contents:
 
-where:
-      201530.18      hours, minutes, and seconds expressed as hhmmss.ss
-                          20      2-digit hour [24 hour clock]
-                          15      2-digit minute
-                          30.18   decimal seconds
-      04            2-digit day,
-      07            2-digit month
-      2002          4-digit year
-      01            2-digit local timezone hours: -13 to 13
-      00            2-digit local timezone minutes: 0 to 59
-      *60           Checksum, begins with *
+    1724619319.23 $GPGGA,  123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
+    1724619320.23 $GPZDA,  123520.23,25,08,2024,00,00*6B
+    1724619321.23 $GPGGA,  123521,4807.078,N,01131.060,E,1,10,0.7,547.0,M,46.9,M,,*4F
+    1724619322.23 $GPZDA,  123522.23,25,08,2024,00,00*69
+    1724619323.23 $GPGGA,  123523,4807.118,N,01131.120,E,1,08,0.8,548.6,M,46.9,M,,*40
+    1724619324.23 $GPZDA,  123524.23,25,08,2024,00,00*6F
+    1724619325.23 $GPGGA,  123525,4807.158,N,01131.180,E,1,10,0.9,550.2,M,46.9,M,,*4D
+    1724619326.23 $GPZDA,  123526.23,25,08,2024,00,00*6D
+    1724619327.23 $GPGGA,  123527,4807.198,N,01131.240,E,1,08,0.7,551.8,M,46.9,M,,*40
+    1724619328.23 $GPZDA,  123528.23,25,08,2024,00,00*63
