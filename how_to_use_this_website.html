@@ -1,34 +1,47 @@
 <h2 class="mainbody"><b>Navigating The Cruise Catalog</b></h2>
-<p class="mainbody">The R2R website offers several ways to access its data stores. Choosing the "BROWSE VESSELS" button in the upper navb bar takes you
-  to the cruise catalog. Selecting a vessel will take you to the vessel page which includes a paginated list of all cruises ordered by date. Selecting a
-  cruise will take you to the cruise page.
+<p class="mainbody">
+  The R2R website offers several ways to access its data stores. Clicking the <b>"Browse Vessels"</b> button in the upper navigation bar takes you to the cruise catalog. From there, selecting a vessel provides a paginated list of all associated cruises, ordered by date. Selecting a specific cruise will take you to its dedicated <b>Cruise Page</b>.
 </p>
-<p class="mainbody">If you know ahead of time which cruise you would like to access then then you may enter it into the the "Search cruise" input area in the upper left sidebar. Doing so well take you to that
-  cruise's page directly bypassing the cruise catalog interface completely.
+<p class="mainbody">
+  If you already know the specific cruise ID, you can enter it into the <b>"Search cruise"</b> input in the upper-left sidebar. This shortcut takes you directly to that cruise's page, bypassing the catalog interface entirely.
 </p>
-<p class="mainbody">The cruise page lists all filesets that belong to that cruise. Each fileset generally maps to a device although a single device may correspond to multiple
-    filesets if it generates multiple data types. To access the direct download for a fileset use its <i class="fas fa-download mc"></i>. To check the contents of the fileset
-    use the <i class="fas fa-download mc"></i> button. This page will list all filenames along with their byte counts and md5 hash values.</p> If instead of the <i class="fas fa-download mc"></i>
-    button you see <i class="fa-solid fa-circle-exclamation"></i> then the Chief Scientist of the cruise has not yet authorized the data for publishing and the data will remain
-    unavailable until it has been released.
+
+<h2 class="mainbody"><b>Using the Cruise Page</b></h2>
+<p class="mainbody">
+  The Cruise Page organizes data into <b>filesets</b>. While a fileset generally maps to a single device, one device may correspond to multiple filesets if it generates different data types. Filesets are grouped into two categories:
 </p>
-<p class="mainbody">If R2R has obtained a data release from the Chief Scientist then the "Request Distro Files" button will appear under "Additional Cruise Information".
-    The distro request tool allows you to request any subset of files from the entire data package (distro). Specify which files you want by checkmarking each directory
-    under the directory tree listing, enter your contact information so that R2R can send you the instructions for accessing the files, and click the  "Submit" button.
-    R2R will reach out with instructions on how to access the requested data.
+<ul class="mainbody">
+  <li><b>Underway Data Sets:</b> Raw data received directly from the vessel.</li>
+  <li><b>Processed Products:</b> Derived products created from the original data.</li>
+</ul>
+
+<p class="mainbody">
+  To initiate a direct download for a fileset, click the <i class="fas fa-download mc"></i> icon. To inspect the specific contents of a fileset—including filenames, byte counts, and MD5 hash values—click the <i class="fas fa-download mc"></i> button. 
 </p>
-<h2 class="mainbody"><b>Access The Search Page</b></h2>
-<p class="mainbody">The "SEARCH" button in the upper nav bar takes you to the Search page which offers an alternative method for finding data: filtering through filesets directly. The Search page
-page allows you to access filesets across multiple cruises by searching with a variety of parameters including (but not limited to) device type, vessel name, and operating institution. For a
-rundown of device options the "DATA TYPES & PRODUCTS" button will take you to an informational page with descriptions of all device types that R2R serves data from.
+<p class="mainbody">
+  If a <i class="fa-solid fa-circle-exclamation"></i> icon appears instead of a download link, the Chief Scientist has not yet authorized the data for public release. These files will remain unavailable until the formal release date.
 </p>
-<p class="mainbody">The "Search device" and "Search keyword" search areas on the left sidebar are a shortcut for accessing the Search page.</p>
-<h2 class="mainbody"><b>Accessing And Using The QA Dashboard</b></h2>
-<p class="mainbody">In addition to serving data R2R also performs QA (quality assurance) to assess the validty of data documenting this in QA reports. To
-    access these QA reports click "QA Dashboard" on the left side bar. To access a report for a specific cruise and enter it into the "Cruise" field and hit "Go". 
-    If you want to access QA reports across multiple cruises instead then use the "Vessel" dropdown to specify the vessel.
+
+<h2 class="mainbody"><b>Additional Information & Distros</b></h2>
+<p class="mainbody">
+  The <b>"Additional Cruise Information"</b> section provides deeper context for the expedition. Here, the <b>File Manifest</b> link takes you to a comprehensive list of all files included in the original data package sent to R2R, which serves as the source for our underway fileset downloads.
 </p>
-<p class="mainbody">Once you've located a QA report you can view the documents with the "Docs & Plots" button. The Quality Assessment Report document contains useful information on the 
-    quality assessment criteria which are visualized as colored lamps on the QA dashboard interface.
+<p class="mainbody">
+  For published cruises, a <b>"Request Distro Files"</b> button will be visible. This tool allows you to request any subset of files from the entire data package (the "distro"). Simply select your desired files from the directory tree, provide your contact information, and click <b>"Submit."</b> R2R will follow up via email with instructions on how to access the requested data.
 </p>
-<h2 class="mainbody"><b>Using the API</b></h2>
+
+<h2 class="mainbody"><b>Advanced Search & Discovery</b></h2>
+<p class="mainbody">
+  The <b>"Search"</b> button in the upper navigation bar allows you to discover data by filtering through filesets across the entire repository. You can search across multiple cruises using parameters such as device type, vessel name, and operating institution. 
+</p>
+<p class="mainbody">
+  If you are unsure of a specific device name, the <b>"Data Types & Products"</b> button opens an informational page describing all device types served by R2R. You can also use the <b>"Search device"</b> and <b>"Search keyword"</b> shortcuts in the left sidebar to jump straight to the Search page.
+</p>
+
+<h2 class="mainbody"><b>The QA Dashboard</b></h2>
+<p class="mainbody">
+  R2R performs <b>Quality Assurance (QA)</b> to assess data validity. To view these assessments, click <b>"QA Dashboard"</b> in the left sidebar. You can locate a report for a specific cruise via the "Cruise" field or use the "Vessel" dropdown to compare reports across multiple expeditions.
+</p>
+<p class="mainbody">
+  Within a QA report, the <b>"Docs & Plots"</b> button provides access to full documentation. The dashboard uses a <b>colored lamp</b> system to visualize quality criteria at a glance; detailed information on these criteria is available within the Quality Assessment Report document.
+</p>
