@@ -1,10 +1,34 @@
-<h2 class="mainbody"><b>Basic Navigation</b></h2>
-<p class="mainbody">The R2R website offers several ways to access its data stores. If you know ahead of time which cruise you would like to access you may
-enter it into the the "Search cruise" input area in the upper left sidebar. Otherwise you can find the target cruise by choosing "BROWSE VESSELS" in the
-upper navigation bar and browsing the cruise catalog.</p>
-<p class="mainbody"></p>
-<p class="mainbody"></p>
-<h2 class="mainbody"><b>Downloading and Requesting Data</b></h2>
-<p><ul class="mainbody"></ul></p>
-<h2 class="mainbody"><b>Accessing The QA Dashboard</b></h2>
+<h2 class="mainbody"><b>Navigating The Cruise Catalog</b></h2>
+<p class="mainbody">The R2R website offers several ways to access its data stores. Choosing the "BROWSE VESSELS" button in the upper navb bar takes you
+  to the cruise catalog. Selecting a vessel will take you to the vessel page which includes a paginated list of all cruises ordered by date. Selecting a
+  cruise will take you to the cruise page.
+</p>
+<p class="mainbody">If you know ahead of time which cruise you would like to access then then you may enter it into the the "Search cruise" input area in the upper left sidebar. Doing so well take you to that
+  cruise's page directly bypassing the cruise catalog interface completely.
+</p>
+<p class="mainbody">The cruise page lists all filesets that belong to that cruise. Each fileset generally maps to a device although a single device may correspond to multiple
+    filesets if it generates multiple data types. To access the direct download for a fileset use its <i class="fas fa-download mc"></i>. To check the contents of the fileset
+    use the <i class="fas fa-download mc"></i> button. This page will list all filenames along with their byte counts and md5 hash values.</p> If instead of the <i class="fas fa-download mc"></i>
+    button you see <i class="fa-solid fa-circle-exclamation"></i> then the Chief Scientist of the cruise has not yet authorized the data for publishing and the data will remain
+    unavailable until it has been released.
+</p>
+<p class="mainbody">If R2R has obtained a data release from the Chief Scientist then the "Request Distro Files" button will appear under "Additional Cruise Information".
+    The distro request tool allows you to request any subset of files from the entire data package (distro). Specify which files you want by checkmarking each directory
+    under the directory tree listing, enter your contact information so that R2R can send you the instructions for accessing the files, and click the  "Submit" button.
+    R2R will reach out with instructions on how to access the requested data.
+</p>
+<h2 class="mainbody"><b>Access The Search Page</b></h2>
+<p class="mainbody">The "SEARCH" button in the upper nav bar takes you to the Search page which offers an alternative method for finding data: filtering through filesets directly. The Search page
+page allows you to access filesets across multiple cruises by searching with a variety of parameters including (but not limited to) device type, vessel name, and operating institution. For a
+rundown of device options the "DATA TYPES & PRODUCTS" button will take you to an informational page with descriptions of all device types that R2R serves data from.
+</p>
+<p class="mainbody">The "Search device" and "Search keyword" search areas on the left sidebar are a shortcut for accessing the Search page.</p>
+<h2 class="mainbody"><b>Accessing And Using The QA Dashboard</b></h2>
+<p class="mainbody">In addition to serving data R2R also performs QA (quality assurance) to assess the validty of data documenting this in QA reports. To
+    access these QA reports click "QA Dashboard" on the left side bar. To access a report for a specific cruise and enter it into the "Cruise" field and hit "Go". 
+    If you want to access QA reports across multiple cruises instead then use the "Vessel" dropdown to specify the vessel.
+</p>
+<p class="mainbody">Once you've located a QA report you can view the documents with the "Docs & Plots" button. The Quality Assessment Report document contains useful information on the 
+    quality assessment criteria which are visualized as colored lamps on the QA dashboard interface.
+</p>
 <h2 class="mainbody"><b>Using the API</b></h2>
